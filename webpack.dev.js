@@ -5,6 +5,10 @@ const path = require('path');
 
 module.exports = merge(common, {
   mode: 'development',
+  devServer: {
+    contentBase: './dist',
+    port: 8888
+  },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
